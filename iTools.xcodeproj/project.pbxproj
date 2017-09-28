@@ -698,6 +698,7 @@
 			baseConfigurationReference = 2C251F7D63EA11D03D03F341 /* Pods-iTools.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = NO;
 				CODE_SIGN_ENTITLEMENTS = iTools/iTools.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Peiran Wang (M688FW8U77)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Peiran Wang (M688FW8U77)";
@@ -724,6 +725,7 @@
 			baseConfigurationReference = 7B784E1EA33DEFA3731A465A /* Pods-iTools.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = NO;
 				CODE_SIGN_ENTITLEMENTS = iTools/iTools.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Peiran Wang (M688FW8U77)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Peiran Wang (M688FW8U77)";

@@ -12,23 +12,24 @@ Pod::Spec.new do |s|
   s.summary      = "创建初始项目，以后会继续维护更新"
 
   s.description  = <<-DESC
-			创建初始项目，以后会继续维护更新
+			创建初始项目，以后会继续维护更新,后续维护加油
 		   DESC
 
   s.homepage     = "https://github.com/907376361/iTools"
   s.license      = "MIT"
   s.license      = { :type => "MIT", :file => "LICENSE" }
-  s.author       = { "zhy" => "yong.zhang@gogen.com.cn" }
-  s.platform     = :ios, "8.0"
+  s.author       = { "xiaoyun@521." => "907376361@qq.com" }
+  s.platform     = :ios, "6.0"
 
 
   s.source       = { :git => "https://github.com/907376361/iTools.git", :tag => "1.0.1" }
 
-  s.source_files  = "Classes", "iTools/Classes/*.{h，m}"
+  s.source_files  = "iTools/Classes/**/*.{h,m}"
 
   s.dependency "JSONKit"
   s.dependency "MJExtension"
   s.dependency "FMDB"
   s.dependency "MJRefresh"
+  s.requires_arc         = true
 
 end
