@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "xiaoyun@521." => "907376361@qq.com" }
-  s.platform     = :ios, "6.0"
+  s.platform     = :ios, "8.0"
 
 
   s.source       = { :git => "https://github.com/907376361/iTools.git", :tag => "1.0.1" }
@@ -28,9 +28,9 @@ Pod::Spec.new do |s|
 
   s.requires_arc  = true
 
-  s.dependency 'AFNetworking'
-  s.dependency 'MJExtension'
-  s.dependency 'FMDB'
-  s.dependency 'MJRefresh'
+  s.dependency "AFNetworking"
+  s.dependency "MJExtension"
+  s.dependency "FMDB"
+  s.dependency "MJRefresh"
 
 end
