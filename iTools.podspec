@@ -26,8 +26,6 @@ Pod::Spec.new do |s|
 
   s.source_files  = "iTools/Classes/Model/*.{h,m}"
   s.source_files  = "iTools/Classes/View/*.{h,m}"
-  s.source_files  = "iTools/Classes/Tools/**/*.{h.m}"
-  s.source_files  = "iTools/Classes/ViewController/*.{h.m}"
 
   s.requires_arc  = true
 
