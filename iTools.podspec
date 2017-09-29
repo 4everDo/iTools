@@ -25,12 +25,13 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/907376361/iTools.git", :tag => "1.0.1" }
 
   s.source_files  = "iTools/Classes/**/*.{h,m}"
+  s.source_files  = "iTools/Classes/**/**/*.{h,m}"
 
   s.requires_arc  = true
 
-  s.dependency "AFNetworking"
-  s.dependency "MJExtension"
-  s.dependency "FMDB"
-  s.dependency "MJRefresh"
+  s.dependency 'AFNetworking', '~> 3.1.0'
+  s.dependency 'MJExtension', '~> 3.0.13'
+  s.dependency 'FMDB', '~> 2.7.2'
+  s.dependency 'MJRefresh', '~> 3.1.13'
 
 end
