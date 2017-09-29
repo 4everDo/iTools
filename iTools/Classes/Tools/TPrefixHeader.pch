@@ -12,7 +12,7 @@
     #import "FMDB.h"
     #import "AFNetworking.h"
     #import "TBaseModel.h"
-    #import "UIHandle.h"
+    #import "TUIHandle.h"
     #import "MJExtension.h"
     #import "MJRefresh.h"
     #import "UIColor+AddColor.h"

@@ -26,10 +26,11 @@ Pod::Spec.new do |s|
 
   s.source_files  = "iTools/Classes/**/*.{h,m}"
 
-  s.dependency "JSONKit"
-  s.dependency "MJExtension"
-  s.dependency "FMDB"
-  s.dependency "MJRefresh"
-  s.requires_arc         = true
+  s.requires_arc  = true
+
+  s.dependency 'AFNetworking'
+  s.dependency 'MJExtension'
+  s.dependency 'FMDB'
+  s.dependency 'MJRefresh'
 
 end

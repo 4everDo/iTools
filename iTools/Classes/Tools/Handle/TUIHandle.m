@@ -1,14 +1,14 @@
 //
-//  UIHandle.m
+//  TUIHandle.m
 //  Start-up.Company.Project
 //
 //  Created by Mac on 16/6/27.
 //  Copyright © 2016年 Mac. All rights reserved.
 //
 
-#import "UIHandle.h"
+#import "TUIHandle.h"
 
-@implementation UIHandle
+@implementation TUIHandle
 
 + (UILabel *)buildCustomLabel:(CGRect)rect text:(NSString *)text alt:(NSTextAlignment)algnment textFont:(UIFont *)font textColor:(UIColor *)textColor{
     UILabel *label = [[UILabel alloc] initWithFrame:rect];

@@ -23,7 +23,7 @@
 }
 
 - (CGFloat)layoutHeightWithEntity:(TBaseModel *)entity{
-    return entity.height;
+    return 50;
 }
 
 @end

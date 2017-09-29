@@ -1,5 +1,5 @@
 //
-//  UIHandle.h
+//  TUIHandle.h
 //  Start-up.Company.Project
 //
 //  Created by Mac on 16/6/27.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface UIHandle : NSObject
+@interface TUIHandle : NSObject
 
 + (UILabel *)buildCustomLabel:(CGRect)rect
                          text:(NSString *)text

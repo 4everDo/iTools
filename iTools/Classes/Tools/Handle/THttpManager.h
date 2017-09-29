@@ -1,5 +1,5 @@
 //
-//  THttpManagerTools.h
+//  THttpManager.h
 //  iTools
 //
 //  Created by admin on 2017/7/26.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-NS_ENUM(NSInteger,TRequestMethodType){
+typedef NS_ENUM(NSInteger,TRequestMethodType){
     TRequestMethodGET,
     TRequestMethodPOST,
     TRequestMethodUpload,
@@ -17,10 +17,9 @@ NS_ENUM(NSInteger,TRequestMethodType){
 };
 
 
+@interface THttpManager : AFHTTPSessionManager
 
-@interface THttpManagerTools : AFHTTPSessionManager
-
-
++ (THttpManager *)shareSingletenManager;
 
 /**
  GET

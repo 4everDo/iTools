@@ -1,19 +1,19 @@
 //
-//  THttpManagerTools.m
+//  THttpManager.m
 //  iTools
 //
 //  Created by admin on 2017/7/26.
 //  Copyright © 2017年 admin. All rights reserved.
 //
 
-#import "THttpManagerTools.h"
+#import "THttpManager.h"
 
 
 
-@implementation THttpManagerTools
+@implementation THttpManager
 
-+ (THttpManagerTools *)shareSingletenManager{
-    static  THttpManagerTools *tool = nil;
++ (THttpManager *)shareSingletenManager{
+    static  THttpManager *tool = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         tool = [[self alloc] init];

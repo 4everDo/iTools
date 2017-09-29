@@ -14,8 +14,6 @@
 
 @property (nonatomic,assign) BOOL  isHaveLine;
 
-- (void)reloadBaseTableViewCell:(TBaseModel *)entity;
-
 - (CGFloat)layoutHeightWithEntity:(TBaseModel *)entity;
 
 @end
