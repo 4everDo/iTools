@@ -25,6 +25,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/907376361/iTools.git", :tag => "1.0.3" }
 
   s.source_files  = "iTools/Classes/*.{h,m}"
+  s.public_header_files = "iTools/Classes/**/*.h"
 
   s.requires_arc  = true
 
