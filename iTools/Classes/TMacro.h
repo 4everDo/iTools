@@ -18,4 +18,16 @@
 
 
 
+/* Log */
+#ifdef DEBUG
+
+    #define TLog(...)  NSLog(__VA_ARGS__)
+    #else
+
+    #define TLog(...)
+#endif
+
+
+
+
 #endif /* Macro_h */

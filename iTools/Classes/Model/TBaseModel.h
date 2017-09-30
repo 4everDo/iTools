@@ -24,5 +24,17 @@
 
 - (NSString *)cacheKey;
 
-    
+#pragma mark ====  重写方法 配置请求 例如SSL
+
+#pragma mark  必须
+//域名
+- (NSString *)BaseURL;
+#pragma mark  非必须
+//Headers 非必需
+- (NSDictionary *)HeaderFields;
+//SSL 非必需
+- (AFSecurityPolicy *)SecurityPolicy;
+//Authorization 非必需
+- (NSString *)Authorization;
+
 @end

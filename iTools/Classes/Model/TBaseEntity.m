@@ -23,8 +23,8 @@
     for (int i = 0; i < count; i++) {
         objc_property_t pp = properties[i];
         
-        NSString *propertyName = [NSString stringWithCString:property_getName(pp) encoding:NSUTF8StringEncoding]; // 转成小写 以防驼峰式命名
-        id valueData = [data objectForKey:propertyName];
+        NSString *propertyName = [NSString stringWithCString:property_getName(pp) encoding:NSUTF8StringEncoding];
+        id valueData = [data objectForKey:[self filterString:propertyName]];
         if (!valueData || [valueData isKindOfClass:[NSNull class]]) {
             continue;
         }
@@ -78,6 +78,13 @@
         }
     }
     return tempArray;
+}
+
+- (NSString *)filterString:(NSString *)string {
+    if ([string hasPrefix:@"r_"]) {
+        return [string substringFromIndex:2];
+    }
+    return string;
 }
 
 @end

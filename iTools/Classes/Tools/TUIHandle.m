@@ -10,7 +10,7 @@
 
 @implementation TUIHandle
 
-+ (UILabel *)buildCustomLabel:(CGRect)rect text:(NSString *)text alt:(NSTextAlignment)algnment textFont:(UIFont *)font textColor:(UIColor *)textColor{
++ (UILabel *)buildCustomLabel:(CGRect)rect text:(NSString *)text alt:(NSTextAlignment)algnment textFont:(UIFont *)font textColor:(UIColor *)textColor {
     UILabel *label = [[UILabel alloc] initWithFrame:rect];
     label.backgroundColor = [UIColor clearColor];
     label.text = text;
@@ -27,7 +27,7 @@
                                 textColor:(UIColor *)textColor
                               placeholder:(NSString *)placeholder
                          placeholderColor:(UIColor *)holderColor
-                          placeholderFont:(UIFont *)holderFont{
+                          placeholderFont:(UIFont *)holderFont {
     UILabel  *label = [[self class] buildCustomLabel:rect text:text alt:alt textFont:font textColor:textColor];
     if (text.length == 0) {
         label.text = placeholder;
@@ -45,7 +45,7 @@
                        textFont:(UIFont *)font
                       textColot:(UIColor *)textColor
                 backgroundColor:(UIColor *)backgroundColor
-                          layer:(CALayer *)layer{
+                          layer:(CALayer *)layer {
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setBackgroundColor:backgroundColor];
@@ -64,7 +64,7 @@
                            datasource:(id)datasource
                               bounces:(BOOL)bounces
                        separatorStyle:(UITableViewCellSeparatorStyle)separatorStyle
-                      backgroundColor:(UIColor*)backgroundColor{
+                      backgroundColor:(UIColor*)backgroundColor {
     UITableView *tableView = [[UITableView alloc] initWithFrame:rect style:UITableViewStylePlain];
     tableView.delegate = delegate;
     tableView.dataSource = datasource;
@@ -75,6 +75,7 @@
     tableView.showsHorizontalScrollIndicator = NO;
     return tableView;
 }
+
 + (UITextField *)buildCustomTextField:(CGRect)rect
                                  text:(NSString *)text
                             textColor:(UIColor *)textColor
@@ -84,7 +85,7 @@
                           placeholder:(NSString *)placeholder
                      placeholderColor:(UIColor *)placeholderColor
                       placeholderFont:(UIFont *)placeholderFont
-                             delegate:(id)target{
+                             delegate:(id)target {
      UITextField *textField = [[UITextField alloc] initWithFrame:rect];
      textField.text=text;
      [textField setTextColor:textColor];
