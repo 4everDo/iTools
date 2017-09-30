@@ -8,11 +8,11 @@
 
 Pod::Spec.new do |s|
   s.name         = "iTools"
-  s.version      = "1.0.2"
-  s.summary      = "创建初始项目，以后会继续维护更新"
+  s.version      = "1.0.3"
+  s.summary      = "创建初始项目，以后会继续维护更新,后续维护"
 
   s.description  = <<-DESC
-			创建初始项目，以后会继续维护更新,后续维护加油
+			添加弹出框工具类，完善网络请求
 		   DESC
 
   s.homepage     = "https://github.com/907376361/iTools"
@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "8.0"
 
 
-  s.source       = { :git => "https://github.com/907376361/iTools.git", :tag => "1.0.2" }
+  s.source       = { :git => "https://github.com/907376361/iTools.git", :tag => "1.0.3" }
 
   s.source_files  = "iTools/Classes/*.{h,m}"
 
