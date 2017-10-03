@@ -8,11 +8,11 @@
 
 Pod::Spec.new do |s|
   s.name         = "iTools"
-  s.version      = "1.0.3"
-  s.summary      = "创建初始项目，以后会继续维护更新,后续维护"
+  s.version      = "1.0.6"
+  s.summary      = "iTools ready Go"
 
   s.description  = <<-DESC
-			添加弹出框工具类，完善网络请求
+			iTools
 		   DESC
 
   s.homepage     = "https://github.com/907376361/iTools"
@@ -22,16 +22,47 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "8.0"
 
 
-  s.source       = { :git => "https://github.com/907376361/iTools.git", :tag => "1.0.3" }
+  s.source       = { :git => "https://github.com/907376361/iTools.git", :tag => "1.0.6" }
 
-  s.source_files  = "iTools/Classes/*.{h,m}"
-  s.public_header_files = "iTools/Classes/**/*.h"
+  s.source_files = "iTools/Classes/*.h"
 
   s.requires_arc  = true
 
-  s.dependency 'AFNetworking', '~> 3.1.0'
-  s.dependency 'MJExtension', '~> 3.0.13'
-  s.dependency 'FMDB', '~> 2.7.2'
-  s.dependency 'MJRefresh', '~> 3.1.13'
+s.subspec 'Category' do |category|
+    category.source_files = 'iTools/Classes/Category/*'
+    category.public_header_files = 'iTools/Classes/Category/*.h'
+end
+
+s.subspec 'ViewController' do |viewcontroller|
+    viewcontroller.source_files = 'iTools/Classes/ViewController/*'
+    viewcontroller.public_header_files = 'iTools/Classes/ViewController/*.h'
+    viewcontroller.dependency 'MJRefresh', '~> 3.1.13'
+    viewcontroller.dependency 'iTools/Classes/View'
+end
+
+s.subspec 'Model' do |model|
+    model.source_files = 'iTools/Classes/Model/*'
+    model.public_header_files = 'iTools/Classes/Model/*.h'
+    model.dependency 'AFNetworking', '~> 3.1.0'
+    model.dependency 'iTools/Classes/Tools'
+end
+
+s.subspec 'Tools' do |tools|
+    tools.source_files = 'iTools/Classes/Tools/*'
+    tools.public_header_files = 'iTools/Classes/Tools/*.h'
+    tools.dependency 'FMDB', '~> 2.7.2'
+    tools.dependency 'AFNetworking', '~> 3.1.0'
+end
+
+s.subspec 'View' do |views|
+    views.source_files = 'iTools/Classes/View/*'
+    views.public_header_files = 'iTools/Classes/View/*.h'
+    views.dependency 'iTools/Classes/Model'
+end
+
+s.subspec 'Custom' do |custom|
+    custom.source_files = 'iTools/Classes/Custom/*'
+    custom.public_header_files = 'iTools/Classes/Custom/*.h'
+end
 
 end
