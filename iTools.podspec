@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name         = "iTools"
-    s.version      = "1.0.7"
+    s.version      = "1.0.8"
     s.summary      = "Create Base Project"
 
     s.homepage     = "https://github.com/907376361/iTools"
