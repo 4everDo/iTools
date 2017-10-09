@@ -7,8 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
-#import "TTestModel.h"
 
 @interface AppDelegate ()
 
@@ -20,15 +18,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = [ViewController new];
+    self.window.rootViewController = [UIViewController new];
     [self.window makeKeyAndVisible];
-    
-    
-    
-    TTestModel *model = [[TTestModel alloc] init];
-    model = [model entityModel];
-    NSLog(@"======  %@===== %@",model.name,model.datasource);
-    
     
     return YES;
 }
