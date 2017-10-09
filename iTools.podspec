@@ -7,6 +7,7 @@
 #
 
 Pod::Spec.new do |s|
+<<<<<<< HEAD
     s.name         = "iTools"
     s.version      = "1.0.7"
     s.summary      = "Create Base Project"
@@ -26,4 +27,27 @@ Pod::Spec.new do |s|
     s.dependency 'FMDB'
 
     s.frameworks = 'UIKit'
+=======
+
+s.name         = "iTools"
+s.version      = "1.0.7"
+s.summary      = "Create Base Project"
+
+s.homepage     = "https://github.com/907376361/iTools"
+s.license      = { :type => "MIT", :file => "LICENSE" }
+s.author       = { "Alline" => "907376361@qq.com" }
+
+s.platform     = :ios, "8.0"
+s.source       = { :git => "https://github.com/907376361/iTools.git", :tag => "#{s.version}" }
+s.source_files = 'iTools/Classes/*.{h,m}'
+s.public_header_files = 'iTools/Classes/*.{h,m}'
+s.requires_arc = true
+
+s.dependency 'AFNetworking'
+s.dependency 'MJRefresh'
+s.dependency 'FMDB'
+
+s.frameworks = 'UIKit'
+
+>>>>>>> 6e43a606433948d8bf0c44507ebc5670a6f7d5c6
 end
