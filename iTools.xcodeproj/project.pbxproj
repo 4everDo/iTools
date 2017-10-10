@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0430624B1F83582E0043CD2A /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 043062291F83582E0043CD2A /* NSString+Category.m */; };
-		0430624C1F83582E0043CD2A /* UIColor+AddColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430622B1F83582E0043CD2A /* UIColor+AddColor.m */; };
-		0430624D1F83582E0043CD2A /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430622D1F83582E0043CD2A /* UIView+Category.m */; };
 		0430624E1F83582E0043CD2A /* NSOrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 043062301F83582E0043CD2A /* NSOrderedDictionary.m */; };
 		0430624F1F83582E0043CD2A /* TBaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 043062331F83582E0043CD2A /* TBaseEntity.m */; };
 		043062501F83582E0043CD2A /* TBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 043062351F83582E0043CD2A /* TBaseModel.m */; };
@@ -65,12 +62,6 @@
 /* Begin PBXFileReference section */
 		04213C381F7DF320005FB8FE /* TMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMacro.h; sourceTree = "<group>"; };
 		04213C391F7DF320005FB8FE /* TPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPrefixHeader.pch; sourceTree = "<group>"; };
-		043062281F83582E0043CD2A /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
-		043062291F83582E0043CD2A /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
-		0430622A1F83582E0043CD2A /* UIColor+AddColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+AddColor.h"; sourceTree = "<group>"; };
-		0430622B1F83582E0043CD2A /* UIColor+AddColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AddColor.m"; sourceTree = "<group>"; };
-		0430622C1F83582E0043CD2A /* UIView+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Category.h"; sourceTree = "<group>"; };
-		0430622D1F83582E0043CD2A /* UIView+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Category.m"; sourceTree = "<group>"; };
 		0430622F1F83582E0043CD2A /* NSOrderedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSOrderedDictionary.h; sourceTree = "<group>"; };
 		043062301F83582E0043CD2A /* NSOrderedDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSOrderedDictionary.m; sourceTree = "<group>"; };
 		043062321F83582E0043CD2A /* TBaseEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBaseEntity.h; sourceTree = "<group>"; };
@@ -156,7 +147,6 @@
 		042ECC041F7B59D200CFCD61 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				043062271F83582E0043CD2A /* Category */,
 				0430622E1F83582E0043CD2A /* Custom */,
 				043062311F83582E0043CD2A /* Models */,
 				043062361F83582E0043CD2A /* Tools */,
@@ -166,19 +156,6 @@
 				04213C391F7DF320005FB8FE /* TPrefixHeader.pch */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		043062271F83582E0043CD2A /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				043062281F83582E0043CD2A /* NSString+Category.h */,
-				043062291F83582E0043CD2A /* NSString+Category.m */,
-				0430622A1F83582E0043CD2A /* UIColor+AddColor.h */,
-				0430622B1F83582E0043CD2A /* UIColor+AddColor.m */,
-				0430622C1F83582E0043CD2A /* UIView+Category.h */,
-				0430622D1F83582E0043CD2A /* UIView+Category.m */,
-			);
-			path = Category;
 			sourceTree = "<group>";
 		};
 		0430622E1F83582E0043CD2A /* Custom */ = {
@@ -514,15 +491,12 @@
 				047AED7B1F8B5B5C00B40A85 /* ViewController.m in Sources */,
 				043062531F83582E0043CD2A /* TShowAlertControllerHandle.m in Sources */,
 				0430624F1F83582E0043CD2A /* TBaseEntity.m in Sources */,
-				0430624D1F83582E0043CD2A /* UIView+Category.m in Sources */,
 				043062551F83582E0043CD2A /* TBaseTableViewController.m in Sources */,
 				043062521F83582E0043CD2A /* THttpManager.m in Sources */,
 				043062591F83582E0043CD2A /* TTestTableViewCell.m in Sources */,
 				0430624E1F83582E0043CD2A /* NSOrderedDictionary.m in Sources */,
 				043062581F83582E0043CD2A /* TErrorPageView.m in Sources */,
-				0430624B1F83582E0043CD2A /* NSString+Category.m in Sources */,
 				043062511F83582E0043CD2A /* THttpBaseClass.m in Sources */,
-				0430624C1F83582E0043CD2A /* UIColor+AddColor.m in Sources */,
 				043062541F83582E0043CD2A /* TUIHandle.m in Sources */,
 				047AED7A1F8B5B5C00B40A85 /* TTestModel.m in Sources */,
 				043062561F83582E0043CD2A /* TBaseViewController.m in Sources */,
