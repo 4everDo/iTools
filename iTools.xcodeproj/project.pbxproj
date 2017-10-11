@@ -146,8 +146,6 @@
 				043062361F83582E0043CD2A /* Tools */,
 				0430623F1F83582E0043CD2A /* ViewControllers */,
 				043062441F83582E0043CD2A /* Views */,
-				04213C381F7DF320005FB8FE /* TMacro.h */,
-				04213C391F7DF320005FB8FE /* TPrefixHeader.pch */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -175,6 +173,7 @@
 		043062361F83582E0043CD2A /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				04213C381F7DF320005FB8FE /* TMacro.h */,
 				043062371F83582E0043CD2A /* THttpBaseClass.h */,
 				043062381F83582E0043CD2A /* THttpBaseClass.m */,
 				043062391F83582E0043CD2A /* THttpManager.h */,
@@ -212,6 +211,7 @@
 		047AED721F8B5B5C00B40A85 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				04213C391F7DF320005FB8FE /* TPrefixHeader.pch */,
 				047AED741F8B5B5C00B40A85 /* AppDelegate.h */,
 				047AED751F8B5B5C00B40A85 /* ViewController.m */,
 				047AED771F8B5B5C00B40A85 /* main.m */,

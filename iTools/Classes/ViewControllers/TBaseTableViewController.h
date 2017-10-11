@@ -9,31 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "TBaseViewController.h"
 
-@class TBaseTableViewCell;
-
-#pragma mark  =====  TableView Delegate
-@protocol TBaseTableViewDatasource <NSObject>
-
-@optional
-
-@required
-
-- (NSInteger)t_numberOfRowsInSection:(NSInteger)section;
-
-- (TBaseTableViewCell *)t_cellForRowAtIndexPath:(NSIndexPath *)indexPath;
-
-@end
-
-@protocol TBaseTableViewDelegate <NSObject>
-
-@required
-
-- (CGFloat)t_heightForRowAtIndexPath:(NSIndexPath *)indexPath;
-
-- (void)t_didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
-
-@end
-
 #pragma mark  ===== 逻辑处理  用于处理加载更多 页面刷新
 @protocol TBaseLogicDelegate <NSObject>
 
@@ -45,10 +20,6 @@
 
 
 @interface TBaseTableViewController : TBaseViewController
-
-@property (nonatomic,assign)  id<TBaseTableViewDelegate> delegate;
-
-@property (nonatomic,assign)  id<TBaseTableViewDatasource> datasource;
 
 @property (nonatomic,assign)  id<TBaseLogicDelegate>   logicDelegate;
 

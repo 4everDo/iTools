@@ -8,7 +8,6 @@
 
 #import "TBaseTableViewController.h"
 #import <MJRefresh/MJRefresh.h>
-#import "TBaseTableViewCell.h"
 
 static  NSString  *cellID  = @"TCellID";
 
@@ -65,7 +64,8 @@ static  NSString  *cellID  = @"TCellID";
     if (noMore) [tableView.mj_footer endRefreshingWithNoMoreData];
 }
 
-#pragma mark  =====  
+#pragma mark  =====
+
 - (void)t_errorPageRefreshClick{
     [tableView.mj_header beginRefreshing];
 }
@@ -73,22 +73,21 @@ static  NSString  *cellID  = @"TCellID";
 #pragma mark  =====  UITableView Delegate Methods
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return [self.delegate t_heightForRowAtIndexPath:indexPath];
+    return 0;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self.delegate t_didSelectRowAtIndexPath:indexPath];
+    
 }
 
 #pragma mark  =====  UITableView Datasource Methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [self.datasource t_numberOfRowsInSection:section];
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    TBaseTableViewCell *cell = [self.datasource t_cellForRowAtIndexPath:indexPath];
-    return cell;
+    return [UITableViewCell new];
 }
 
 @end
