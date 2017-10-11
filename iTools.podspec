@@ -32,6 +32,7 @@ s.subspec 'ViewControllers' do |controllers|
 controllers.source_files = 'iTools/Classes/ViewControllers/*'
 controllers.public_header_files = 'iTools/Classes/ViewControllers/*.h'
 controllers.dependency 'iTools/Views'
+controllers.dependency 'MJRefresh'
 end
 
 s.subspec 'Models' do |models|

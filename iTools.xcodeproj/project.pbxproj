@@ -18,8 +18,6 @@
 		043062561F83582E0043CD2A /* TBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043062431F83582E0043CD2A /* TBaseViewController.m */; };
 		043062571F83582E0043CD2A /* TBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 043062461F83582E0043CD2A /* TBaseTableViewCell.m */; };
 		043062581F83582E0043CD2A /* TErrorPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 043062481F83582E0043CD2A /* TErrorPageView.m */; };
-		043062591F83582E0043CD2A /* TTestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430624A1F83582E0043CD2A /* TTestTableViewCell.m */; };
-		047AED7A1F8B5B5C00B40A85 /* TTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 047AED731F8B5B5C00B40A85 /* TTestModel.m */; };
 		047AED7B1F8B5B5C00B40A85 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047AED751F8B5B5C00B40A85 /* ViewController.m */; };
 		047AED7C1F8B5B5C00B40A85 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 047AED771F8B5B5C00B40A85 /* main.m */; };
 		047AED7D1F8B5B5C00B40A85 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 047AED781F8B5B5C00B40A85 /* AppDelegate.m */; };
@@ -84,12 +82,8 @@
 		043062461F83582E0043CD2A /* TBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBaseTableViewCell.m; sourceTree = "<group>"; };
 		043062471F83582E0043CD2A /* TErrorPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TErrorPageView.h; sourceTree = "<group>"; };
 		043062481F83582E0043CD2A /* TErrorPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TErrorPageView.m; sourceTree = "<group>"; };
-		043062491F83582E0043CD2A /* TTestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTestTableViewCell.h; sourceTree = "<group>"; };
-		0430624A1F83582E0043CD2A /* TTestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTestTableViewCell.m; sourceTree = "<group>"; };
-		047AED731F8B5B5C00B40A85 /* TTestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTestModel.m; sourceTree = "<group>"; };
 		047AED741F8B5B5C00B40A85 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		047AED751F8B5B5C00B40A85 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		047AED761F8B5B5C00B40A85 /* TTestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTestModel.h; sourceTree = "<group>"; };
 		047AED771F8B5B5C00B40A85 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		047AED781F8B5B5C00B40A85 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		047AED791F8B5B5C00B40A85 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -211,8 +205,6 @@
 				043062461F83582E0043CD2A /* TBaseTableViewCell.m */,
 				043062471F83582E0043CD2A /* TErrorPageView.h */,
 				043062481F83582E0043CD2A /* TErrorPageView.m */,
-				043062491F83582E0043CD2A /* TTestTableViewCell.h */,
-				0430624A1F83582E0043CD2A /* TTestTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -220,10 +212,8 @@
 		047AED721F8B5B5C00B40A85 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				047AED731F8B5B5C00B40A85 /* TTestModel.m */,
 				047AED741F8B5B5C00B40A85 /* AppDelegate.h */,
 				047AED751F8B5B5C00B40A85 /* ViewController.m */,
-				047AED761F8B5B5C00B40A85 /* TTestModel.h */,
 				047AED771F8B5B5C00B40A85 /* main.m */,
 				047AED781F8B5B5C00B40A85 /* AppDelegate.m */,
 				047AED791F8B5B5C00B40A85 /* ViewController.h */,
@@ -493,12 +483,10 @@
 				0430624F1F83582E0043CD2A /* TBaseEntity.m in Sources */,
 				043062551F83582E0043CD2A /* TBaseTableViewController.m in Sources */,
 				043062521F83582E0043CD2A /* THttpManager.m in Sources */,
-				043062591F83582E0043CD2A /* TTestTableViewCell.m in Sources */,
 				0430624E1F83582E0043CD2A /* NSOrderedDictionary.m in Sources */,
 				043062581F83582E0043CD2A /* TErrorPageView.m in Sources */,
 				043062511F83582E0043CD2A /* THttpBaseClass.m in Sources */,
 				043062541F83582E0043CD2A /* TUIHandle.m in Sources */,
-				047AED7A1F8B5B5C00B40A85 /* TTestModel.m in Sources */,
 				043062561F83582E0043CD2A /* TBaseViewController.m in Sources */,
 				043062571F83582E0043CD2A /* TBaseTableViewCell.m in Sources */,
 				047AED7C1F8B5B5C00B40A85 /* main.m in Sources */,
