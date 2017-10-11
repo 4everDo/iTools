@@ -9,7 +9,6 @@
 #import "TBaseViewController.h"
 #import "TErrorPageView.h"
 
-
 @interface TBaseViewController ()
 {
     TErrorPageView    *t_error_view;

@@ -7,8 +7,8 @@
 //
 
 #import "TBaseTableViewController.h"
+#import <MJRefresh/MJRefresh.h>
 #import "TBaseTableViewCell.h"
-
 
 static  NSString  *cellID  = @"TCellID";
 
@@ -87,7 +87,8 @@ static  NSString  *cellID  = @"TCellID";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return [self.datasource t_cellForRowAtIndexPath:indexPath];
+    TBaseTableViewCell *cell = [self.datasource t_cellForRowAtIndexPath:indexPath];
+    return cell;
 }
 
 @end

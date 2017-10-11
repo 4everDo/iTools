@@ -8,8 +8,6 @@
 
 #import "THttpBaseClass.h"
 
-
-
 @implementation THttpBaseClass
 
 + (THttpBaseClass *)shareSingletenManager{

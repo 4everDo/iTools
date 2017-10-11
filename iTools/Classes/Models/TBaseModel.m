@@ -163,7 +163,7 @@
         self.data = [self entityData:tmpData];
     }
     
-    NSString *cacheKey = [self cacheKey];//是否缓存 待续
+//    NSString *cacheKey = [self cacheKey];//是否缓存 待续
     
     
     return self;

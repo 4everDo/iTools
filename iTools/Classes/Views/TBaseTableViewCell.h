@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "TBaseModel.h"
 
-
 @interface TBaseTableViewCell : UITableViewCell
 
 @property (nonatomic,assign) BOOL  isHaveLine;

@@ -8,20 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "TBaseViewController.h"
-#import "TBaseTableViewCell.h"
+
+@class TBaseTableViewCell;
 
 #pragma mark  =====  TableView Delegate
 @protocol TBaseTableViewDatasource <NSObject>
 
 @optional
 
-
 @required
 
 - (NSInteger)t_numberOfRowsInSection:(NSInteger)section;
 
 - (TBaseTableViewCell *)t_cellForRowAtIndexPath:(NSIndexPath *)indexPath;
-
 
 @end
 

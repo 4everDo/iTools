@@ -13,33 +13,44 @@ s.version      = "0.0.1"
 s.summary      = "Base Tools Classes"
 
 s.homepage     = "https://github.com/907376361/iTools"
-s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
-s.author             = { "Allien" => "907376361@qq.com" }
+s.license      = { :type => "MIT", :file => "LICENSE" }
+s.author       = { "Allien" => "907376361@qq.com" }
 
-s.platform     = :ios, "7.0"
+s.platform     = :ios, "8.0"
 
 s.source       = { :git => "https://github.com/907376361/iTools.git", :tag => "#{s.version}" }
 
 s.requires_arc = true
 
-s.subspec 'Tools' do |tool|
-tool.source_files = 'iTools/Classes/Tools/*.{h,m}'
-tool.dependency 'AFNetworking', '~> 3.0'
+
+s.subspec 'Custom' do |custom|
+custom.source_files = 'iTools/Classes/Custom/*'
+custom.public_header_files = 'iTools/Classes/Custom/*.h'
 end
 
-s.subspec 'Models' do |model|
-model.source_files = 'iTools/Classes/Models/*.{h,m}'
-model.dependency 'iTools/Classes/Tools'
+s.subspec 'ViewControllers' do |controllers|
+controllers.source_files = 'iTools/Classes/ViewControllers/*'
+controllers.public_header_files = 'iTools/Classes/ViewControllers/*.h'
+controllers.dependency 'iTools/Views'
 end
 
-s.subspec 'Views' do |view|
-view.source_files = 'iTools/Classes/Views/*.{h,m}'
-view.dependency 'iTools/Classes/Models'
+s.subspec 'Models' do |models|
+models.source_files = 'iTools/Classes/Models/*'
+models.public_header_files = 'iTools/Classes/Models/*.h'
+models.dependency 'iTools/Tools'
 end
 
-s.subspec 'ViewControllers' do |vc|
-vc.source_files = 'iTools/Classes/ViewControllers/*.{h,m}'
-vc.dependency 'iTools/Classes/Views'
+s.subspec 'Tools' do |tools|
+tools.source_files = 'iTools/Classes/Tools/*'
+tools.public_header_files = 'iTools/Classes/Tools/*.h'
+tools.dependency 'AFNetworking'
+end
+
+s.subspec 'Views' do |views|
+views.source_files = 'iTools/Classes/Views/*'
+views.public_header_files = 'iTools/Classes/Views/*.h'
+views.dependency 'iTools/Tools'
+views.dependency 'iTools/Models'
 end
 
 s.frameworks = 'UIKit'
@@ -48,6 +59,8 @@ s.frameworks = 'Foundation'
 s.frameworks = 'CoreGraphics'
 s.frameworks = 'MobileCoreServices'
 s.frameworks = 'SystemConfiguration'
+
+
 
 # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
 # s.dependency "JSONKit", "~> 1.4"

@@ -7,6 +7,8 @@
 //
 
 #import "TTestTableViewCell.h"
+#import "TTestModel.h"
+
 
 @interface TTestTableViewCell()
 {
