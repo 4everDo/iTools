@@ -87,6 +87,7 @@
 		047AED771F8B5B5C00B40A85 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		047AED781F8B5B5C00B40A85 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		047AED791F8B5B5C00B40A85 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		04CD5A2B1F8DF01D00FC5094 /* iTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iTools.h; sourceTree = "<group>"; };
 		1D1015FFCCF1F3BBC5BF4DE4 /* libPods-iTools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iTools.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C251F7D63EA11D03D03F341 /* Pods-iTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTools.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iTools/Pods-iTools.debug.xcconfig"; sourceTree = "<group>"; };
 		7B784E1EA33DEFA3731A465A /* Pods-iTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTools.release.xcconfig"; path = "Pods/Target Support Files/Pods-iTools/Pods-iTools.release.xcconfig"; sourceTree = "<group>"; };
@@ -146,6 +147,7 @@
 				043062361F83582E0043CD2A /* Tools */,
 				0430623F1F83582E0043CD2A /* ViewControllers */,
 				043062441F83582E0043CD2A /* Views */,
+				04CD5A2B1F8DF01D00FC5094 /* iTools.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -635,7 +637,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Peiran Wang (M688FW8U77)";
 				DEVELOPMENT_TEAM = AB8CM5S774;
 				ENABLE_BITCODE = NO;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/iTools/Classes/TPrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/iTools/Application/TPrefixHeader.pch";
 				INFOPLIST_FILE = iTools/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -662,7 +664,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Peiran Wang (M688FW8U77)";
 				DEVELOPMENT_TEAM = AB8CM5S774;
 				ENABLE_BITCODE = NO;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/iTools/Classes/TPrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/iTools/Application/TPrefixHeader.pch";
 				INFOPLIST_FILE = iTools/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
