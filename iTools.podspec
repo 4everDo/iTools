@@ -19,7 +19,8 @@ s.author       = { "Allien" => "907376361@qq.com" }
 s.platform     = :ios, "8.0"
 
 s.source       = { :git => "https://github.com/907376361/iTools.git", :tag => "#{s.version}" }
-s.source_files = 'iTools/Classes/**/*'
+s.source_files = 'iTools/Classes/iTools.h'
+s.public_header_files = 'iTools/Classes/iTools.h'
 s.requires_arc = true
 
 
