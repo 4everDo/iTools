@@ -39,17 +39,6 @@ static  NSArray    *_t_headerFields = nil;
     self.responseSerializer = responseSerializer;
     self.requestSerializer = [AFJSONRequestSerializer serializer];
 }
-- (AFSecurityPolicy *)buildCustomSecurityPolicy {
-    NSString * cerPath = [[NSBundle mainBundle] pathForResource:@"project" ofType:@"cer"];
-    NSData * certData = [NSData dataWithContentsOfFile:cerPath];
-    NSSet * certDataSet = [[NSSet alloc] initWithObjects:certData, nil];
-    AFSecurityPolicy * securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
-    
-    securityPolicy.allowInvalidCertificates = YES;
-    securityPolicy.validatesDomainName = NO;
-    securityPolicy.pinnedCertificates = certDataSet;
-    return securityPolicy;
-}
 
 - (void)setT_base_url:(NSString *)t_base_url {
     if (t_base_url) {
@@ -88,24 +77,6 @@ static  NSArray    *_t_headerFields = nil;
     } failComplate:^(NSError *error) {
         failure(error);
     }];
-    
-    return;
-    NSMutableURLRequest *request = [manager.requestSerializer requestWithMethod:@"GET" URLString:[NSString stringWithFormat:@"%@%@",_t_baseURL,url] parameters:param error:nil];
-    request.timeoutInterval = timeOut;
-    if (_t_headerFields) {
-        for (NSDictionary *dic in _t_headerFields) {
-            [request setValue:dic.allValues[0] forHTTPHeaderField:dic.allKeys[0]];
-        }
-    }
-    
-    NSURLSessionDataTask *task = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
-        if (error) {
-            failure(error);
-        }else{
-            resultComplate(responseObject);
-        }
-    }];
-    [task resume];
 }
 
 
