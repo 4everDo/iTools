@@ -72,7 +72,6 @@ static  NSArray    *_t_headerFields = nil;
     }
     
     [manager t_HttpManagerRequestMethod:type URL:[NSString stringWithFormat:@"%@%@",_t_baseURL,url] param:param successComplate:^(NSDictionary *result) {
-        TLog(@"result  ====  %@",result);
         resultComplate(result);
     } failComplate:^(NSError *error) {
         failure(error);
