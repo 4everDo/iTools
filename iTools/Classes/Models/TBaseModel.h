@@ -31,8 +31,6 @@
 //域名
 - (NSString *)BaseURL;
 #pragma mark  非必须
-//Headers 非必需
-- (NSDictionary *)HeaderFields;
 //SSL 非必需
 - (AFSecurityPolicy *)SecurityPolicy;
 //Authorization 非必需

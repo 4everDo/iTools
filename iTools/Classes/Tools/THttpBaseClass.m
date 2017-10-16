@@ -15,10 +15,18 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         tool = [[self alloc] init];
+        [tool initHeaderField];
     });
     return tool;
 }
 
+- (void)initHeaderField {
+    THttpBaseClass *tool = [THttpBaseClass shareSingletenManager];
+    AFHTTPRequestSerializer *serializer = tool.requestSerializer;
+    [serializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [serializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    tool.requestSerializer = serializer;
+}
 
 - (void)t_HttpManagerRequestGET:(NSString *)urlString
                           param:(NSDictionary *)param
@@ -59,7 +67,7 @@
               }
           }
           failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-              
+              NSLog(@"error ==== %@",error.userInfo);
     }] resume];
 }
 

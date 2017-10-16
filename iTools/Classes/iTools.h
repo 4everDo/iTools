@@ -15,5 +15,6 @@
 #import "NSOrderedDictionary.h"
 #import "THttpBaseClass.h"
 #import "TMacro.h"
+#import "TBaseEntity.h"
 
 #endif /* iTools_h */

@@ -7,10 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "ListModel.h"
 
 @interface ViewController ()
 {
     UILabel  *label;
+    ListModel *model;
 }
 @end
 
@@ -25,5 +27,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (TBaseModel *)configDatasource {
+    model = [[ListModel alloc] init];
+    return model;
+}
+
+- (void)reloadResult:(BOOL)success {
+    NSLog(@"==== %@",model);
+}
 
 @end

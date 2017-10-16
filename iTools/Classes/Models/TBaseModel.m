@@ -31,10 +31,9 @@
 }
 
 - (void)setupManager {
-    [self tool];
+    _manager = [THttpManager shareSingletenManager];
     _manager.t_base_url = [self BaseURL];
     _manager.tSecurityPolicy = [self SecurityPolicy];
-    _manager.tHeaderFields = [self HeaderFields];
     _manager.tAuthorization = [self Authorization];
 }
 
@@ -61,10 +60,6 @@
 }
 
 #pragma mark  =====  请求所需
-- (THttpManager *)tool {
-    _manager = [THttpManager manager];
-    return _manager;
-}
 
 - (TRequestMethodType)method {
     return TRequestMethodGET;
@@ -104,14 +99,14 @@
         self.isloading = YES;
         
         NSMutableDictionary *param = [[NSMutableDictionary alloc] initWithDictionary:[self param]];
-        [param setObject:@(_pagenumber) forKey:[self pageKey]];
-        [param setObject:@(_limit) forKey:[self pageSizeKey]];
-        
-//TODO: 添加网络请求
-        [_manager t_HttpManagerRequestMethod:[self method] URL:[self requestUrl] param:[self param] successComplate:^(NSDictionary *result) {
+        if ([self pageKey]) {
+            [param setObject:@(_pagenumber) forKey:[self pageKey]];
+            [param setObject:@(_limit) forKey:[self pageSizeKey]];
+        }
+        [THttpManager requestWithUrl:[self requestUrl] withParam:[self param] type:[self method] result:^(id resultObject) {
             self.isloading = NO;
-            finishBlock([self phaseData:result]);
-        } failComplate:^(NSError *error) {
+            finishBlock([self phaseData:resultObject]);
+        } failure:^(NSError *error) {
             errorBlock(error);
         }];
     }
@@ -128,8 +123,8 @@
 
 - (id)phaseData:(id)data {
     _status = [[data objectForKey:[self statusKey]] integerValue];
-    id tmpData = [data objectForKey:[self dataKey]]; // 目标数据
-    // 若返回有问题
+    id tmpData = [data objectForKey:[self dataKey]];
+    
     if (_status != 200) {
         return self;
     }
@@ -140,6 +135,7 @@
         _canLoadMore = NO;
     } else {
         _canLoadMore = YES;
+        _pagenumber ++;
     }
     
     if ([tmpData isKindOfClass:[NSArray class]]) {
@@ -162,9 +158,7 @@
     } else {
         self.data = [self entityData:tmpData];
     }
-    
-//    NSString *cacheKey = [self cacheKey];//是否缓存 待续
-    
+    //TODO:缓存
     
     return self;
 }

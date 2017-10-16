@@ -23,6 +23,7 @@ static  NSString  *cellID  = @"TCellID";
     [super viewDidLoad];
     self.error_delegate = self;
     [self loadTableView];
+    [self loadDatasource];
 }
 
 - (void)loadTableView{
@@ -31,10 +32,16 @@ static  NSString  *cellID  = @"TCellID";
     tableView.dataSource = self;
     [self.view addSubview:tableView];
 }
+- (void)loadDatasource {
+    _dataModel = [self configDatasource];
+    [self requestData];
+}
+
 
 - (void)setT_header:(BOOL)t_header{
     if (t_header) {
         tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+            [self requestData];
             if ([self.logicDelegate respondsToSelector:@selector(t_headerFreshViewLoading)]) {
                 [self.logicDelegate t_headerFreshViewLoading];
             }
@@ -45,6 +52,7 @@ static  NSString  *cellID  = @"TCellID";
 - (void)setT_footer:(BOOL)t_footer{
     if (t_footer) {
         tableView.mj_footer  = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+            [self requestData];
             if ([self.logicDelegate respondsToSelector:@selector(t_footerFreshViewLoading)]) {
                 [self.logicDelegate t_footerFreshViewLoading];
             }
@@ -62,6 +70,29 @@ static  NSString  *cellID  = @"TCellID";
     [tableView.mj_header endRefreshing];
     [tableView.mj_footer endRefreshing];
     if (noMore) [tableView.mj_footer endRefreshingWithNoMoreData];
+}
+
+- (void)requestData {
+    [_dataModel loadData:^{
+        
+    } finishBlock:^(TBaseModel *model) {
+        [self reloadResult:YES];
+    } errorBlock:^(NSError *error) {
+        //失败 弹出提示框
+    }];
+}
+
+- (void)reloadResult:(BOOL)success {
+    if (_dataModel.data) {
+        [self endRefreshing:_dataModel.canLoadMore];
+    }else{
+        self.t_error_self = YES;
+    }
+}
+
+- (TBaseModel *)configDatasource {
+    TBaseModel *model = [[TBaseModel alloc] init];
+    return model;
 }
 
 #pragma mark  =====

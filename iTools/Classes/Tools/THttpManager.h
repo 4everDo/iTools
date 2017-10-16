@@ -15,14 +15,12 @@
 /**
  SSL  需要配置证书
  */
-
 @property (nonatomic,strong) AFSecurityPolicy *tSecurityPolicy;
-@property (nonatomic,strong) NSDictionary  *tHeaderFields;
 
 @property (nonatomic,strong) NSString    *tAuthorization;
 
-+ (THttpManager *)manager;
++ (THttpManager *)shareSingletenManager;
 
-+ (NSURLSessionDataTask *)requestWithBody:(NSString *)body withUrl:(NSString *)url result:(void(^)(id resultObject))result failure:(void(^)(NSError *error))failure;
++ (void)requestWithUrl:(NSString *)url withParam:(NSDictionary *)param type:(TRequestMethodType)type result:(void(^)(id resultObject))resultComplate failure:(void(^)(NSError *error))failure;
 
 @end
