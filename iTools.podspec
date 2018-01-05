@@ -34,7 +34,6 @@ controllers.source_files = 'iTools/Classes/ViewControllers/*'
 controllers.public_header_files = 'iTools/Classes/ViewControllers/*.h'
 controllers.dependency 'iTools/Views'
 controllers.dependency 'MJRefresh'
-controllers.dependency 'MBProgressHUD'
 end
 
 s.subspec 'Models' do |models|
@@ -47,6 +46,8 @@ s.subspec 'Tools' do |tools|
 tools.source_files = 'iTools/Classes/Tools/*'
 tools.public_header_files = 'iTools/Classes/Tools/*.h'
 tools.dependency 'AFNetworking'
+tools.dependency 'MBProgressHUD'
+tools.dependency 'CocoaCategory'
 end
 
 s.subspec 'Views' do |views|
