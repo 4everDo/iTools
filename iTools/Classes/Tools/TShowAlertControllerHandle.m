@@ -14,24 +14,32 @@ static UIViewController<UIImagePickerControllerDelegate, UINavigationControllerD
 + (void)showAlertController:(UIViewController *)target titles:(NSArray *)titles style:(UIAlertControllerStyle)style selected:(void (^)(NSInteger index))selected {
     UIAlertController *c = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:style];
     [c addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-       
     }]];
-    for (int i=0;i<titles.count;i++) {
-        NSString *title = titles[i];
-        [c addAction:[UIAlertAction actionWithTitle:title style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            if (selected) {
-                selected(i);
-            }
-        }]];
-    }
+    [[self class] addAction:titles withAlertController:c selected:selected];
     [target presentViewController:c animated:YES completion:nil];
 }
 
 + (void)showAlertControllerWith:(UIViewController *)target title:(NSString *)title message:(NSString *)message otherButtonTitles:(NSArray *)titles selected:(void (^)(NSInteger index))selected {
     UIAlertController *c = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     [c addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        
     }]];
+    [[self class] addAction:titles withAlertController:c selected:selected];
+    [target presentViewController:c animated:YES completion:nil];
+}
++ (void)showAlertControllerCancel:(UIViewController *)target title:(NSString *)title message:(NSString *)message buttonName:(NSString *)buttonName cancel:(void (^)(void))cancel {
+    UIAlertController *c = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    [c addAction:[UIAlertAction actionWithTitle:buttonName style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        if (cancel) {
+            cancel();
+        }
+    }]];
+    [target presentViewController:c animated:YES completion:nil];
+}
+
++ (void)addAction:(NSArray *)titles withAlertController:(UIAlertController *)c selected:(void (^)(NSInteger index))selected{
+    if (titles.count == 0) {
+        return;
+    }
     for (int i=0;i<titles.count;i++) {
         NSString *title = titles[i];
         [c addAction:[UIAlertAction actionWithTitle:title style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -40,7 +48,6 @@ static UIViewController<UIImagePickerControllerDelegate, UINavigationControllerD
             }
         }]];
     }
-    [target presentViewController:c animated:YES completion:nil];
 }
 
 

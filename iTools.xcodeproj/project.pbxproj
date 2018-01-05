@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041CB2C01FFF087E008F3C67 /* THUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 041CB2BF1FFF087E008F3C67 /* THUD.m */; };
 		0428B8211F94523100B4CA59 /* ListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0428B8201F94523100B4CA59 /* ListModel.m */; };
 		0430624E1F83582E0043CD2A /* NSOrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 043062301F83582E0043CD2A /* NSOrderedDictionary.m */; };
 		0430624F1F83582E0043CD2A /* TBaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 043062331F83582E0043CD2A /* TBaseEntity.m */; };
@@ -62,6 +63,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		041CB2BE1FFF087E008F3C67 /* THUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THUD.h; sourceTree = "<group>"; };
+		041CB2BF1FFF087E008F3C67 /* THUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THUD.m; sourceTree = "<group>"; };
 		04213C381F7DF320005FB8FE /* TMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMacro.h; sourceTree = "<group>"; };
 		04213C391F7DF320005FB8FE /* TPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPrefixHeader.pch; sourceTree = "<group>"; };
 		0428B81F1F94523100B4CA59 /* ListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListModel.h; sourceTree = "<group>"; };
@@ -194,6 +197,8 @@
 				0430623C1F83582E0043CD2A /* TShowAlertControllerHandle.m */,
 				0430623D1F83582E0043CD2A /* TUIHandle.h */,
 				0430623E1F83582E0043CD2A /* TUIHandle.m */,
+				041CB2BE1FFF087E008F3C67 /* THUD.h */,
+				041CB2BF1FFF087E008F3C67 /* THUD.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -503,6 +508,7 @@
 				0428B8211F94523100B4CA59 /* ListModel.m in Sources */,
 				0430624F1F83582E0043CD2A /* TBaseEntity.m in Sources */,
 				043062551F83582E0043CD2A /* TBaseTableViewController.m in Sources */,
+				041CB2C01FFF087E008F3C67 /* THUD.m in Sources */,
 				043062521F83582E0043CD2A /* THttpManager.m in Sources */,
 				0430624E1F83582E0043CD2A /* NSOrderedDictionary.m in Sources */,
 				043062581F83582E0043CD2A /* TErrorPageView.m in Sources */,

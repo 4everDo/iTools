@@ -27,13 +27,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)requestQBData {
+//    []
+}
+
+
 - (TBaseModel *)configDatasource {
     model = [[ListModel alloc] init];
     return model;
 }
 
 - (void)reloadResult:(BOOL)success {
-    NSLog(@"==== %@",model);
+    
 }
+
 
 @end

@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "iTools"
-s.version      = "0.0.8"
+s.version      = "0.1.0"
 s.summary      = "Base Tools Classes"
 
 s.homepage     = "https://github.com/907376361/iTools"
@@ -34,6 +34,7 @@ controllers.source_files = 'iTools/Classes/ViewControllers/*'
 controllers.public_header_files = 'iTools/Classes/ViewControllers/*.h'
 controllers.dependency 'iTools/Views'
 controllers.dependency 'MJRefresh'
+controllers.dependency 'MBProgressHUD'
 end
 
 s.subspec 'Models' do |models|
@@ -66,6 +67,6 @@ s.frameworks = 'SystemConfiguration'
 
 # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
 # s.dependency "JSONKit", "~> 1.4"
-s.dependency "MBProgressHUD"
+# s.dependency "MBProgressHUD"
 
 end

@@ -36,6 +36,22 @@
 + (void)showAlertControllerWith:(UIViewController *)target title:(NSString *)title message:(NSString *)message otherButtonTitles:(NSArray *)titles selected:(void (^)(NSInteger index))selected;
 
 
+/**
+ 只有取消按钮的弹出框
+
+ @param target 代理
+ @param title 名称
+ @param message 消息
+ @param buttonName 取消按钮title
+ @param cancel 取消回掉方法
+ */
++ (void)showAlertControllerCancel:(UIViewController *)target title:(NSString *)title message:(NSString *)message buttonName:(NSString *)buttonName cancel:(void (^)(void))cancel;
+
+/**
+ 相册选择
+ 
+ @param target c
+ */
 - (void)showAlertControllerWithPhoto:(UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate> *)target;
 
 
