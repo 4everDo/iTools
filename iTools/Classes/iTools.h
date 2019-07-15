@@ -16,6 +16,7 @@
 #import "THttpManager.h"
 #import "TMacro.h"
 #import "TBaseEntity.h"
-#import "THUD.h"
+#import "TBaseModel.h"
+
 
 #endif /* iTools_h */

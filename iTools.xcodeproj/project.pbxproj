@@ -14,8 +14,6 @@
 		043062501F83582E0043CD2A /* TBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 043062351F83582E0043CD2A /* TBaseModel.m */; };
 		043062511F83582E0043CD2A /* THttpBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 043062381F83582E0043CD2A /* THttpBaseClass.m */; };
 		043062521F83582E0043CD2A /* THttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430623A1F83582E0043CD2A /* THttpManager.m */; };
-		043062531F83582E0043CD2A /* TShowAlertControllerHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430623C1F83582E0043CD2A /* TShowAlertControllerHandle.m */; };
-		043062541F83582E0043CD2A /* TUIHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430623E1F83582E0043CD2A /* TUIHandle.m */; };
 		043062551F83582E0043CD2A /* TBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043062411F83582E0043CD2A /* TBaseTableViewController.m */; };
 		043062561F83582E0043CD2A /* TBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043062431F83582E0043CD2A /* TBaseViewController.m */; };
 		043062571F83582E0043CD2A /* TBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 043062461F83582E0043CD2A /* TBaseTableViewCell.m */; };
@@ -79,10 +77,6 @@
 		043062381F83582E0043CD2A /* THttpBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THttpBaseClass.m; sourceTree = "<group>"; };
 		043062391F83582E0043CD2A /* THttpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THttpManager.h; sourceTree = "<group>"; };
 		0430623A1F83582E0043CD2A /* THttpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THttpManager.m; sourceTree = "<group>"; };
-		0430623B1F83582E0043CD2A /* TShowAlertControllerHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TShowAlertControllerHandle.h; sourceTree = "<group>"; };
-		0430623C1F83582E0043CD2A /* TShowAlertControllerHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TShowAlertControllerHandle.m; sourceTree = "<group>"; };
-		0430623D1F83582E0043CD2A /* TUIHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUIHandle.h; sourceTree = "<group>"; };
-		0430623E1F83582E0043CD2A /* TUIHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUIHandle.m; sourceTree = "<group>"; };
 		043062401F83582E0043CD2A /* TBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBaseTableViewController.h; sourceTree = "<group>"; };
 		043062411F83582E0043CD2A /* TBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBaseTableViewController.m; sourceTree = "<group>"; };
 		043062421F83582E0043CD2A /* TBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBaseViewController.h; sourceTree = "<group>"; };
@@ -193,10 +187,6 @@
 				043062381F83582E0043CD2A /* THttpBaseClass.m */,
 				043062391F83582E0043CD2A /* THttpManager.h */,
 				0430623A1F83582E0043CD2A /* THttpManager.m */,
-				0430623B1F83582E0043CD2A /* TShowAlertControllerHandle.h */,
-				0430623C1F83582E0043CD2A /* TShowAlertControllerHandle.m */,
-				0430623D1F83582E0043CD2A /* TUIHandle.h */,
-				0430623E1F83582E0043CD2A /* TUIHandle.m */,
 				041CB2BE1FFF087E008F3C67 /* THUD.h */,
 				041CB2BF1FFF087E008F3C67 /* THUD.m */,
 			);
@@ -401,6 +391,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -504,7 +495,6 @@
 			files = (
 				047AED7D1F8B5B5C00B40A85 /* AppDelegate.m in Sources */,
 				047AED7B1F8B5B5C00B40A85 /* ViewController.m in Sources */,
-				043062531F83582E0043CD2A /* TShowAlertControllerHandle.m in Sources */,
 				0428B8211F94523100B4CA59 /* ListModel.m in Sources */,
 				0430624F1F83582E0043CD2A /* TBaseEntity.m in Sources */,
 				043062551F83582E0043CD2A /* TBaseTableViewController.m in Sources */,
@@ -513,7 +503,6 @@
 				0430624E1F83582E0043CD2A /* NSOrderedDictionary.m in Sources */,
 				043062581F83582E0043CD2A /* TErrorPageView.m in Sources */,
 				043062511F83582E0043CD2A /* THttpBaseClass.m in Sources */,
-				043062541F83582E0043CD2A /* TUIHandle.m in Sources */,
 				04CD5A2E1F8E16FB00FC5094 /* TNetMiddleware.m in Sources */,
 				043062561F83582E0043CD2A /* TBaseViewController.m in Sources */,
 				043062571F83582E0043CD2A /* TBaseTableViewCell.m in Sources */,
