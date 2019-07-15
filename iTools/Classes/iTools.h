@@ -13,7 +13,7 @@
 #import "TErrorPageView.h"
 #import "TBaseTableViewCell.h"
 #import "NSOrderedDictionary.h"
-#import "THttpBaseClass.h"
+#import "THttpManager.h"
 #import "TMacro.h"
 #import "TBaseEntity.h"
 
