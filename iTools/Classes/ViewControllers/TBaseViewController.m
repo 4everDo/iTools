@@ -36,6 +36,7 @@
                 [weakSelf.error_delegate t_errorPageRefreshClick];
             }
         };
+        t_error_view.alpha = 0;
     }
     [self.view addSubview:t_error_view];
 }

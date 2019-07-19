@@ -9,8 +9,8 @@
 Pod::Spec.new do |s|
 
 s.name         = "iTools"
-s.version      = "0.1.2"
-s.summary      = "Base Tools Classes"
+s.version      = "0.1.5"
+s.summary      = "基础框架整理"
 
 s.homepage     = "https://github.com/907376361/iTools"
 s.license      = { :type => "MIT", :file => "LICENSE" }

@@ -12,7 +12,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
-    self.backgroundColor = [UIColor redColor];
+    self.backgroundColor = [UIColor whiteColor];
     [self addTargetWithClick];
     return self;
 }
