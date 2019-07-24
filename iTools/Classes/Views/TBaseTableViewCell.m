@@ -7,7 +7,7 @@
 //
 
 #import "TBaseTableViewCell.h"
-
+#import "UIView+Category.h"
 
 @interface TBaseTableViewCell()
 {
