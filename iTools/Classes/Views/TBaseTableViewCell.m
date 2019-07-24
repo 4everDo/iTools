@@ -25,8 +25,8 @@
 }
 
 - (void)layoutBaseTableView{
-    lineView = [[UIView alloc] initWithFrame:CGRectMake(0, self.height - 1, self.width, 1)];
-    lineView.backgroundColor = [UIColor colorWithHexString:@"#e1e1e1"];
+    lineView = [[UIView alloc] initWithFrame:CGRectMake(0, self.frame.size.height - 1, self.frame.size.width, 1)];
+    lineView.backgroundColor = [UIColor colorWithRed:225/255.f green:225/255.f blue:225/255.f alpha:1];
     lineView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleTopMargin;
     [self.contentView addSubview:lineView];
 }
@@ -44,7 +44,7 @@
     }
 }
 
-+ (CGFloat)layoutHeightWithEntity:(TBaseModel *)entity{
++ (CGFloat)layoutHeightWithEntity:(TBaseModel *)entity {
     return 50;
 }
 

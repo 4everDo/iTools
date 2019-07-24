@@ -13,6 +13,7 @@ typedef struct HorizontalEdgeInsets {
     CGFloat left,right;
 } HorizontalEdgeInsets;
 
+
 @interface TBaseTableViewCell : UITableViewCell
 
 @property (nonatomic,assign) BOOL  isSepatator;
