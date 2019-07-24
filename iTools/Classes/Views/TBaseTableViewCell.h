@@ -20,6 +20,6 @@ typedef struct HorizontalEdgeInsets {
 
 @property (nonatomic) HorizontalEdgeInsets separatorInsets;//分割线
 
-+ (CGFloat)layoutHeightWithEntity:(TBaseModel *)entity;
+- (CGFloat)layoutHeightWithEntity:(TBaseModel *)entity;
 
 @end

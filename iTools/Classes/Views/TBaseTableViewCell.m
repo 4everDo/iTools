@@ -44,7 +44,7 @@
     }
 }
 
-+ (CGFloat)layoutHeightWithEntity:(TBaseModel *)entity {
+- (CGFloat)layoutHeightWithEntity:(TBaseModel *)entity {
     return 50;
 }
 
