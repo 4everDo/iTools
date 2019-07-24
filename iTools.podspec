@@ -55,7 +55,7 @@ views.source_files = 'iTools/Classes/Views/*'
 views.public_header_files = 'iTools/Classes/Views/*.h'
 views.dependency 'iTools/Tools'
 views.dependency 'iTools/Models'
-tools.dependency 'CocoaCategory'
+views.dependency 'CocoaCategory'
 end
 
 s.frameworks = 'UIKit'
