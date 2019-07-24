@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "TBaseModel.h"
+#import "TMacro.h"
 
 typedef struct HorizontalEdgeInsets {
     CGFloat left,right;
@@ -20,6 +21,6 @@ typedef struct HorizontalEdgeInsets {
 
 @property (nonatomic) HorizontalEdgeInsets separatorInsets;//分割线
 
-- (CGFloat)layoutHeightWithEntity:(TBaseModel *)entity;
++ (CGFloat)layoutHeightWithEntity:(TBaseModel *)entity;
 
 @end
