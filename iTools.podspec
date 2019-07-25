@@ -9,8 +9,8 @@
 Pod::Spec.new do |s|
 
 s.name         = "iTools"
-s.version      = "0.1.7"
-s.summary      = "基础框架整理"
+s.version      = "0.1.8"
+s.summary      = "开放TableViewController中TableView的操作权限"
 
 s.homepage     = "https://github.com/907376361/iTools"
 s.license      = { :type => "MIT", :file => "LICENSE" }
