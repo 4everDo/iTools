@@ -32,6 +32,8 @@
 
 @property (nonatomic,assign)  BOOL  t_error_self;
 
+@property (nonatomic,strong)  UITableView  *tableView;
+
 - (TBaseModel *)configDatasource;
 
 - (void)endRefreshing:(BOOL)noMore;

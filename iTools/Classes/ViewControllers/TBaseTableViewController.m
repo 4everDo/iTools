@@ -12,9 +12,6 @@
 static  NSString  *cellID  = @"TCellID";
 
 @interface TBaseTableViewController ()<UITableViewDelegate,UITableViewDataSource,TErrorPageRefreshDelegate>
-{
-    UITableView      *tableView;
-}
 @end
 
 @implementation TBaseTableViewController
@@ -27,10 +24,10 @@ static  NSString  *cellID  = @"TCellID";
 }
 
 - (void)loadTableView{
-    tableView = [[UITableView alloc] initWithFrame:[[UIScreen mainScreen] bounds] style:UITableViewStylePlain];
-    tableView.delegate = self;
-    tableView.dataSource = self;
-    [self.view addSubview:tableView];
+    _tableView = [[UITableView alloc] initWithFrame:[[UIScreen mainScreen] bounds] style:UITableViewStylePlain];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    [self.view addSubview:_tableView];
 }
 - (void)loadDatasource {
     _dataModel = [self configDatasource];
@@ -40,7 +37,7 @@ static  NSString  *cellID  = @"TCellID";
 
 - (void)setT_header:(BOOL)t_header{
     if (t_header) {
-        tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
             [self requestData];
             if ([self.logicDelegate respondsToSelector:@selector(t_headerFreshViewLoading)]) {
                 [self.logicDelegate t_headerFreshViewLoading];
@@ -51,7 +48,7 @@ static  NSString  *cellID  = @"TCellID";
 
 - (void)setT_footer:(BOOL)t_footer{
     if (t_footer) {
-        tableView.mj_footer  = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        _tableView.mj_footer  = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
             [self requestData];
             if ([self.logicDelegate respondsToSelector:@selector(t_footerFreshViewLoading)]) {
                 [self.logicDelegate t_footerFreshViewLoading];
@@ -62,14 +59,14 @@ static  NSString  *cellID  = @"TCellID";
 
 - (void)setT_error_self:(BOOL)t_error_self{
     self.t_error = t_error_self;
-    tableView.alpha = !t_error_self;
+    _tableView.alpha = !t_error_self;
 }
 
 - (void)endRefreshing:(BOOL)noMore{
-    [tableView reloadData];
-    [tableView.mj_header endRefreshing];
-    [tableView.mj_footer endRefreshing];
-    if (noMore) [tableView.mj_footer endRefreshingWithNoMoreData];
+    [_tableView reloadData];
+    [_tableView.mj_header endRefreshing];
+    [_tableView.mj_footer endRefreshing];
+    if (noMore) [_tableView.mj_footer endRefreshingWithNoMoreData];
 }
 
 - (void)requestData {
@@ -98,7 +95,7 @@ static  NSString  *cellID  = @"TCellID";
 #pragma mark  =====
 
 - (void)t_errorPageRefreshClick{
-    [tableView.mj_header beginRefreshing];
+    [_tableView.mj_header beginRefreshing];
 }
 
 #pragma mark  =====  UITableView Delegate Methods
