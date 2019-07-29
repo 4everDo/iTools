@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TBaseEntity : NSObject
+@interface TBaseEntity : NSObject<NSCoding>
 
 + (TBaseEntity *)entityWithData:(id)data;
 

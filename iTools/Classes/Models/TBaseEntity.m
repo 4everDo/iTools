@@ -87,4 +87,50 @@
     return string;
 }
 
+- (NSMutableDictionary *)getEntityAllPropertys {
+    NSMutableDictionary *param = [[NSMutableDictionary alloc] initWithCapacity:0];
+    unsigned int count;
+    objc_property_t *properties = class_copyPropertyList([self class], &count);
+    
+    for (int i = 0; i < count; i++) {
+        objc_property_t p = properties[i];
+        NSString *propertyName = [NSString stringWithCString:property_getName(p) encoding:NSUTF8StringEncoding];
+        
+        id value = [self valueForKey:propertyName];
+        Class cls = [self getPropertyClass:p];
+        
+        if ([cls isSubclassOfClass:[NSArray class]]) {
+            NSMutableArray *tempArray = [NSMutableArray array];
+            for (id item in value) {
+                if ([item isKindOfClass:[TBaseEntity class]]) {
+                    NSMutableDictionary *tempDic = [(TBaseEntity *)item getEntityAllPropertys];
+                    [tempArray addObject:tempDic];
+                } else {
+                    [tempArray addObject:item];
+                }
+            }
+            [param setValue:tempArray forKey:[self filterString:propertyName]];
+        } else if ([cls isSubclassOfClass:[TBaseEntity class]]) {
+            NSMutableDictionary *tempDic = [value getEntityAllPropertys];
+            [param setValue:tempDic forKey:[self filterString:propertyName]];
+        } else {
+            [param setValue:value forKey:[self filterString:propertyName]];
+        }
+    }
+    free(properties);
+    return param;
+}
+
+
+#define mark  实现NSCoding协议
+
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    [aCoder encodeObject:[self getEntityAllPropertys] forKey:@"aCoder"];
+}
+
+- (nullable instancetype)initWithCoder:(NSCoder *)aDecoder {
+    [self analyzeEntityWithData:[aDecoder decodeObjectForKey:@"aCoder"]];
+    return self;
+}
+
 @end
