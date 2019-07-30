@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "iTools"
-s.version      = "0.2.3"
+s.version      = "0.2.4"
 s.summary      = "收回HTTPManager 中baseURL可更改权限"
 
 s.homepage     = "https://github.com/907376361/iTools"
