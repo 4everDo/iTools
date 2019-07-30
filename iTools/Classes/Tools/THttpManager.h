@@ -10,14 +10,13 @@
 
 @interface THttpManager : THttpBaseClass
 
-@property (nonatomic,assign) NSString  *t_base_url;
-
 /**
  SSL  需要配置证书
  */
 @property (nonatomic,strong) AFSecurityPolicy *tSecurityPolicy;
 
 @property (nonatomic,strong) NSString    *tAuthorization;
+
 
 + (THttpManager *)shareSingletenManager;
 

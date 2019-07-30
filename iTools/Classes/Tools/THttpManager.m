@@ -10,7 +10,6 @@
 
 static  NSInteger  timeOut = 20;
 
-static  NSString   *_t_baseURL = @"";
 static  NSString   *_t_authorization = @"";
 static  NSArray    *_t_headerFields = nil;
 
@@ -40,12 +39,6 @@ static  NSArray    *_t_headerFields = nil;
     self.requestSerializer = [AFJSONRequestSerializer serializer];
 }
 
-- (void)setT_base_url:(NSString *)t_base_url {
-    if (t_base_url) {
-        _t_baseURL = t_base_url;
-    }
-}
-
 - (void)setTSecurityPolicy:(AFSecurityPolicy *)tSecurityPolicy {
     if (tSecurityPolicy) {
         _t_securityPolicy = tSecurityPolicy;
@@ -71,7 +64,7 @@ static  NSArray    *_t_headerFields = nil;
         [manager.requestSerializer setValue:_t_authorization forHTTPHeaderField:@"Authorization"];
     }
     
-    [manager t_HttpManagerRequestMethod:type URL:[NSString stringWithFormat:@"%@%@",_t_baseURL,url] param:param successComplate:^(NSDictionary *result) {
+    [manager t_HttpManagerRequestMethod:type URL:url param:param successComplate:^(NSDictionary *result) {
         resultComplate(result);
     } failComplate:^(NSError *error) {
         failure(error);
