@@ -29,7 +29,7 @@
 
 #pragma mark  必须
 //域名
-- (NSString *)BaseURL;
+- (NSString *)requestUrl;
 #pragma mark  非必须
 //SSL 非必需
 - (AFSecurityPolicy *)SecurityPolicy;

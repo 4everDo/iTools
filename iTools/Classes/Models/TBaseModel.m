@@ -72,9 +72,6 @@
     return @"";
 }
 
-- (NSString *)BaseURL {
-    return @"";
-}
 //Headers 非必需
 - (NSDictionary *)HeaderFields {
     return @{};
