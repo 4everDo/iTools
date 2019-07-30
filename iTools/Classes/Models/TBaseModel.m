@@ -32,7 +32,6 @@
 
 - (void)setupManager {
     _manager = [THttpManager shareSingletenManager];
-    _manager.t_base_url = [self BaseURL];
     _manager.tSecurityPolicy = [self SecurityPolicy];
     _manager.tAuthorization = [self Authorization];
 }
