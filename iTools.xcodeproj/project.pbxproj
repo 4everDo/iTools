@@ -26,26 +26,7 @@
 		04CD5A321F8E1AB800FC5094 /* test.cer in Resources */ = {isa = PBXBuildFile; fileRef = 04CD5A311F8E1AB800FC5094 /* test.cer */; };
 		21D82E27C258C6F78DAC3C92 /* libPods-iTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1015FFCCF1F3BBC5BF4DE4 /* libPods-iTools.a */; };
 		846190A11F286DAB00E8D53B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846190A01F286DAB00E8D53B /* Assets.xcassets */; };
-		846190AF1F286DAB00E8D53B /* iToolsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 846190AE1F286DAB00E8D53B /* iToolsTests.m */; };
-		846190BA1F286DAB00E8D53B /* iToolsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 846190B91F286DAB00E8D53B /* iToolsUITests.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		846190AB1F286DAB00E8D53B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 846190891F286DAB00E8D53B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 846190901F286DAB00E8D53B;
-			remoteInfo = iTools;
-		};
-		846190B61F286DAB00E8D53B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 846190891F286DAB00E8D53B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 846190901F286DAB00E8D53B;
-			remoteInfo = iTools;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		84F99FF51F32C90500F0E217 /* Embed App Extensions */ = {
@@ -101,10 +82,8 @@
 		846190911F286DAB00E8D53B /* iTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846190A01F286DAB00E8D53B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		846190A51F286DAB00E8D53B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		846190AA1F286DAB00E8D53B /* iToolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iToolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		846190AE1F286DAB00E8D53B /* iToolsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iToolsTests.m; sourceTree = "<group>"; };
 		846190B01F286DAB00E8D53B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		846190B51F286DAB00E8D53B /* iToolsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iToolsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		846190B91F286DAB00E8D53B /* iToolsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iToolsUITests.m; sourceTree = "<group>"; };
 		846190BB1F286DAB00E8D53B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84F99FE91F32C90500F0E217 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
@@ -117,20 +96,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				21D82E27C258C6F78DAC3C92 /* libPods-iTools.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		846190A71F286DAB00E8D53B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		846190B21F286DAB00E8D53B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +224,6 @@
 			isa = PBXGroup;
 			children = (
 				846190911F286DAB00E8D53B /* iTools.app */,
-				846190AA1F286DAB00E8D53B /* iToolsTests.xctest */,
-				846190B51F286DAB00E8D53B /* iToolsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -319,42 +282,6 @@
 			productReference = 846190911F286DAB00E8D53B /* iTools.app */;
 			productType = "com.apple.product-type.application";
 		};
-		846190A91F286DAB00E8D53B /* iToolsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 846190C11F286DAB00E8D53B /* Build configuration list for PBXNativeTarget "iToolsTests" */;
-			buildPhases = (
-				846190A61F286DAB00E8D53B /* Sources */,
-				846190A71F286DAB00E8D53B /* Frameworks */,
-				846190A81F286DAB00E8D53B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				846190AC1F286DAB00E8D53B /* PBXTargetDependency */,
-			);
-			name = iToolsTests;
-			productName = iToolsTests;
-			productReference = 846190AA1F286DAB00E8D53B /* iToolsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		846190B41F286DAB00E8D53B /* iToolsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 846190C41F286DAB00E8D53B /* Build configuration list for PBXNativeTarget "iToolsUITests" */;
-			buildPhases = (
-				846190B11F286DAB00E8D53B /* Sources */,
-				846190B21F286DAB00E8D53B /* Frameworks */,
-				846190B31F286DAB00E8D53B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				846190B71F286DAB00E8D53B /* PBXTargetDependency */,
-			);
-			name = iToolsUITests;
-			productName = iToolsUITests;
-			productReference = 846190B51F286DAB00E8D53B /* iToolsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -374,16 +301,6 @@
 							};
 						};
 					};
-					846190A91F286DAB00E8D53B = {
-						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Manual;
-						TestTargetID = 846190901F286DAB00E8D53B;
-					};
-					846190B41F286DAB00E8D53B = {
-						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Manual;
-						TestTargetID = 846190901F286DAB00E8D53B;
-					};
 				};
 			};
 			buildConfigurationList = 8461908C1F286DAB00E8D53B /* Build configuration list for PBXProject "iTools" */;
@@ -401,8 +318,6 @@
 			projectRoot = "";
 			targets = (
 				846190901F286DAB00E8D53B /* iTools */,
-				846190A91F286DAB00E8D53B /* iToolsTests */,
-				846190B41F286DAB00E8D53B /* iToolsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -415,20 +330,6 @@
 				04CD5A321F8E1AB800FC5094 /* test.cer in Resources */,
 				044631101F8F651300545C7C /* project.cer in Resources */,
 				846190A11F286DAB00E8D53B /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		846190A81F286DAB00E8D53B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		846190B31F286DAB00E8D53B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,36 +412,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		846190A61F286DAB00E8D53B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				846190AF1F286DAB00E8D53B /* iToolsTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		846190B11F286DAB00E8D53B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				846190BA1F286DAB00E8D53B /* iToolsUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		846190AC1F286DAB00E8D53B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 846190901F286DAB00E8D53B /* iTools */;
-			targetProxy = 846190AB1F286DAB00E8D53B /* PBXContainerItemProxy */;
-		};
-		846190B71F286DAB00E8D53B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 846190901F286DAB00E8D53B /* iTools */;
-			targetProxy = 846190B61F286DAB00E8D53B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		846190BC1F286DAB00E8D53B /* Debug */ = {
@@ -695,60 +567,6 @@
 			};
 			name = Release;
 		};
-		846190C21F286DAB00E8D53B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = iToolsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gogen.ios.gogenius.iToolsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iTools.app/iTools";
-			};
-			name = Debug;
-		};
-		846190C31F286DAB00E8D53B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = iToolsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gogen.ios.gogenius.iToolsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iTools.app/iTools";
-			};
-			name = Release;
-		};
-		846190C51F286DAB00E8D53B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = iToolsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gogen.ios.gogenius.iToolsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				TEST_TARGET_NAME = iTools;
-			};
-			name = Debug;
-		};
-		846190C61F286DAB00E8D53B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = iToolsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gogen.ios.gogenius.iToolsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				TEST_TARGET_NAME = iTools;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -766,24 +584,6 @@
 			buildConfigurations = (
 				846190BF1F286DAB00E8D53B /* Debug */,
 				846190C01F286DAB00E8D53B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		846190C11F286DAB00E8D53B /* Build configuration list for PBXNativeTarget "iToolsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				846190C21F286DAB00E8D53B /* Debug */,
-				846190C31F286DAB00E8D53B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		846190C41F286DAB00E8D53B /* Build configuration list for PBXNativeTarget "iToolsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				846190C51F286DAB00E8D53B /* Debug */,
-				846190C61F286DAB00E8D53B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

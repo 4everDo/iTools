@@ -17,6 +17,6 @@
 #import "TMacro.h"
 #import "TBaseEntity.h"
 #import "TBaseModel.h"
-
+#import "THUD.h"
 
 #endif /* iTools_h */
