@@ -10,7 +10,6 @@
 #define iTools_h
 
 #import "TBaseTableViewController.h"
-#import "TErrorPageView.h"
 #import "TBaseTableViewCell.h"
 #import "NSOrderedDictionary.h"
 #import "THttpManager.h"

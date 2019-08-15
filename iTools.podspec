@@ -9,8 +9,8 @@
 Pod::Spec.new do |s|
 
 s.name         = "iTools"
-s.version      = "0.2.5"
-s.summary      = "收回HTTPManager 中baseURL可更改权限"
+s.version      = "0.2.6"
+s.summary      = "删除默认错误页面，分离"
 
 s.homepage     = "https://github.com/907376361/iTools"
 s.license      = { :type => "MIT", :file => "LICENSE" }
